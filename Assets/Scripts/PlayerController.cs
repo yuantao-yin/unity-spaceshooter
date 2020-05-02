@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         {
             nextFire = Time.time + fireDelta;
             Instantiate(shot, shotSpawn.transform.position, shotSpawn.transform.rotation);
-            GetComponent<AudioSource>().Play();
+            //GetComponent<AudioSource>().Play();
         }
     }
 

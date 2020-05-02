@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RestartButton : MonoBehaviour
 {
     public void HandleOnClickEvent()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene("Main", LoadSceneMode.Single);
     }
 }
