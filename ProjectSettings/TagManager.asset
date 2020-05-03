@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boundary
   - ScoreText
+  - Enemy
   layers:
   - Default
   - TransparentFX
