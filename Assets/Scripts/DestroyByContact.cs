@@ -7,13 +7,19 @@ public class DestroyByContact : MonoBehaviour {
 	public GameObject playerExplosion;
 	public int scoreValue;
 	private GameController gameController;
+	private HealthBarController healthBar;
 
 	private void Start()
 	{
 		GameObject gameControllerObj = GameObject.FindWithTag("GameController");
+		GameObject healthBarControllerObj = GameObject.FindWithTag("HealthBar");
 		if (gameControllerObj != null)
 		{
 			gameController = gameControllerObj.GetComponent<GameController>();
+		}
+		if (healthBarControllerObj != null)
+		{
+			healthBar = healthBarControllerObj.GetComponent<HealthBarController>();
 		}
 		if (gameController == null)
 		{
@@ -33,11 +39,19 @@ public class DestroyByContact : MonoBehaviour {
 		
 		if (other.tag == "Player")
 		{
-			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-			gameController.GameOver();
+			if (healthBar)
+			{
+				healthBar.onTakeDamage(10);
+				if (healthBar.health <= 0)
+				{
+					Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+					gameController.GameOver();
+					Destroy(other.gameObject);
+				} 
+			}
+			
 		}
 		gameController.AddScore(scoreValue);
-		Destroy (other.gameObject);
 		Destroy (gameObject);
 	}
 }
