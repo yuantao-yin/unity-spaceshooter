@@ -17,5 +17,8 @@ This game is made based on Unity offical Spaceshooter tutorial with extension. C
 ## Demo
 ![Demo](spaceshooter.gif)
 
+## Contributing
+Feel free to play and add more feature.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
