@@ -1,7 +1,7 @@
 # Unity 3D - SpaceShooter
 
-This game is made based on Unity offical Spaceshooter tutorial with extension. Can be deployed to IOS and Android. Unity version: 2019.3.10
-
+This game is made based on Unity offical Spaceshooter tutorial with extension. Can be deployed to IOS and Android. Unity version: 2019.3.10  
+![cover](spaceshooter-main.jpg)
 ## What includes
 
 - Player
