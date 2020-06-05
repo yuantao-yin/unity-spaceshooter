@@ -14,5 +14,8 @@ This game is made based on Unity offical Spaceshooter tutorial with extension. C
 - Scoring
 - Health bar
 
+## Demo
+![Demo](spaceshooter.gif)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
